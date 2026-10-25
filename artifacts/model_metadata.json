@@ -1,0 +1,31 @@
+{
+  "target": "Product_Store_Sales_Total",
+  "features": [
+    "Product_Weight",
+    "Product_Sugar_Content",
+    "Product_Allocated_Area",
+    "Product_Type",
+    "Product_MRP",
+    "Store_Id",
+    "Store_Establishment_Year",
+    "Store_Size",
+    "Store_Location_City_Type",
+    "Store_Type",
+    "Product_Id_Prefix"
+  ],
+  "model": "Random Forest",
+  "best_parameters": {
+    "model__max_depth": null,
+    "model__min_samples_leaf": 2,
+    "model__n_estimators": 200
+  },
+  "reference_year": 2026,
+  "holdout_metrics": {
+    "RMSE": 294.6926899724064,
+    "MAE": 107.57749547622772,
+    "R-squared": 0.9246656500776437,
+    "MAPE (%)": 4.011469932022836
+  },
+  "data_rows": 8763,
+  "note": "Cross-sectional product-store revenue estimate; not a date-indexed quarterly forecast."
+}
