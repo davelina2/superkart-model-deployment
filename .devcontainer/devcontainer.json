@@ -1,0 +1,28 @@
+{
+  "name": "SuperKart GitHub and Render development",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "forwardPorts": [8000, 8501, 10000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Static dashboard preview",
+      "onAutoForward": "openBrowser"
+    },
+    "8501": {
+      "label": "Streamlit prediction UI",
+      "onAutoForward": "openBrowser"
+    },
+    "10000": {
+      "label": "Flask prediction API",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install -r backend_files/requirements.txt -r frontend_files/requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  }
+}
